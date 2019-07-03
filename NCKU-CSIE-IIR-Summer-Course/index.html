@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IIR 新生訓練 | What is SQL ?</title>
+        <meta name="description" content="給 IIR 的碩0新生 2019/07">
+        <meta name="author" content="charlychiu">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <h3>What is SQL ?</h3>
+                        <small>Created by <a href="#">charlychiu</a> / <a href="https://fb.me/charly.chiu">@邱煌鑌</a> - 2019/07</small>
+                    </p>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Structured Query Language (SQL)
+
+                        - DDL (Data Definition Language)
+                        - DML (Data Manipulation Language)
+                        - DCL (Data Control Language)
+                        - TCL (Transaction Control Language)
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Structure
+                        
+                        - User
+                        - Database
+                        - Table
+                        - Field
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## User & Database
+                        
+                        > create user & create database & grant privileges
+
+                        ```sql
+                        CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>';
+                        CREATE DATABASE IF NOT EXISTS `<db_name>` default charset utf8 COLLATE utf8_general_ci;
+                        GRANT ALL PRIVILEGES ON `<db_name>`.* TO '<username>'@'localhost';
+                        ```
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Table
+                        
+                        > create table
+
+                        ```sql
+                        CREATE TABLE Persons
+                        (
+                            id int NOT NULL AUTO_INCREMENT,
+                            email varchar(255) NOT NULL,
+                            name varchar(255),
+                            note text,
+                            created_at timestamp
+                        );
+                        ```
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## CRUD - Create Read Update Delete
+
+                        > Create
+
+                        ```sql
+                        INSERT INTO Persons (email, name, note, created_at)
+                        VALUES ('xxx@gmail.com','test_user','user for develop','2019-07-07 00:01:02');
+                        ```
+
+                        > Read
+
+                        ```sql
+                        SELECT email, name FROM Persons;
+                        ```
+                        ```sql
+                        SELECT * FROM Persons;
+                        ```
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## CRUD - Create Read Update Delete
+
+                        > Update
+
+                        ```sql
+                        UPDATE Persons
+                        SET name='normal user', email='user@gmail.com'
+                        WHERE id=2;
+                        ```
+
+                        > Delete
+
+                        ```sql
+                        DELETE FROM Persons WHERE id=2;
+                        ```
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## XAMPP
+
+                        > Apache + MariaDB + PHP + Perl  
+                        > On Linux, OS X, Windows
+
+                        [Link](https://www.apachefriends.org/zh_tw/index.html)
+                        
+                        ![example](./image.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## phpMyAdmin
+
+                        > MySQL database management tool written in PHP
+                        
+                        ![example](./image-1.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Announcement
+                        
+                        For security, following action is not suggested
+                        > Expose default port (3306)  
+                        > Can direct access via Internet(not Intranet)
+                        > etc...
+
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Object-Relational Mapping
+
+                        > When using DB via raw query, many aspect need to be noticed  
+                        (ex. SQL injection, escape character)
+                        
+                        - Django -> models
+                        - Laravel -> Eloquent
+                        - Asp.net -> EF with Linq
+                        
+                        
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## RDBMS
+                        
+                        ![example](./image-2.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Q & A
+                        ### 有問題歡迎提問
+                        
+                    </script>
+                </section>
+            </div>
+        </div>
+        <script src="../reveal.js/lib/js/head.min.js"></script>
+        <script src="../reveal.js/js/reveal.js"></script>
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: 'c/t',
+                transition: 'zoom', // none/fade/slide/convex/concave/zoom
+                multiplex: {
+                    // Example values. To generate your own, see the socket.io server instructions.
+                    secret: '15621371769833996425', // null so the clients do not have control of the master presentation
+                    id: '1546a58fe83e7d06', // id, obtained from socket.io server
+                    url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+                },
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    { src: '../reveal.js/plugin/notes/notes.js', async: true },
+                    { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+                    //{ src: '../reveal.js/plugin/multiplex/master.js', async: true },
+                    { src: '../reveal.js/plugin/multiplex/client.js', async: true },
+            ]});
+        </script>
+    </body>
+</html>
