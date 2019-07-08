@@ -188,10 +188,9 @@
                         > C:\xampp\mysql\bin\mysql  
                         ```shell
                         $ mysql -u root
-                        create database <db_name>;
-                        use <db_name>;
+                        create database <db_name> character set utf8 collate utf8_general_ci;
                         exit;
-                        $ mysql -u root <db_name> < test1.sql
+                        $ mysql -u root --default-character-set=utf8 <db_name> < ***.sql
                         ```
                     </script>
                 </section>
