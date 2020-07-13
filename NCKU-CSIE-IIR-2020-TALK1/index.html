@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <title>IIR 新生訓練 | TALK1 </title>
+        <title>reveal.js - Markdown Example</title>
+        <meta name="description" content="給 IIR 的碩0新生 2020/07">
+        <meta name="author" content="charlychiu">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/dist/theme/blood.css" id="theme">
+
+        <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
+        
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+                <section>
+                    <h3>TALK (murmur ...)</h3>
+                        <small>Created by <a href="#">charlychiu</a> / <a href="https://fb.me/charly.chiu">@邱煌鑌</a> - 2020/07</small>
+                    </p>
+                </section>
+                <!-- Slides are separated by three dashes (quick 'n dirty regular expression) -->
+                <section data-markdown data-separator="---">
+                    <script type="text/template">
+                        ## Project
+                        苦差事
+                        ---
+                        ## Actually
+                        Yes, it is 苦差事
+                        ---
+                        ## But?
+                        - Teamwork 
+                        - Coding ability
+                        - Project manager (x)
+                        - Recognize teammates (o)
+                        ---
+                        ## Future
+                        - AI engineer 
+                        ---
+                        ## Future Facts
+                        - API engineer XD
+                        - Product implementation 
+                        - Other position
+                        ---
+                        ## So?
+                        Production & Research as important
+                    </script>
+                </section>
+
+                <!-- Slide attributes -->
+                <section data-markdown>
+                    <script type="text/template">
+                        <!-- .slide: data-background="#000000" -->
+                        ## Why Laravel?
+                    </script>
+                </section>
+
+                <!-- Element attributes -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Reason
+                        - Me <!-- .element: class="fragment" data-fragment-index="2" -->
+                        - Artisan framework? <!-- .element: class="fragment" data-fragment-index="1" -->
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Language
+                        - C#
+                        - Swift
+                        - Python
+                        - Java
+                        - Javascript
+                        - Php
+                        - Go                         
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Project
+                        - LineManager
+                        - Medchex
+                        - GIW
+                        - Lightlogue
+                        - RoleManager
+                        - MQTT-transportation
+                        - IIR-Dashboard
+                        - ....
+                    </script>
+                </section>
+
+            </div>
+		</div>
+
+		<script src="../reveal.js/dist/reveal.js"></script>
+        <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+        <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+        <script src="../reveal.js/plugin/notes/notes.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                multiplex: {
+                    // Example values. To generate your own, see the socket.io server instructions.
+                    secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
+                    id: '66dd26711c273839', // Obtained from socket.io server
+                    url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server
+                },
+                dependencies: [
+                    { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+                    { src: '../multiplex/client.js', async: true }
+                ],
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                
+			});
+
+		</script>
+
+	</body>
+</html>
