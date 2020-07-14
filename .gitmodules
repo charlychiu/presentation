@@ -4,3 +4,6 @@
 [submodule "multiplex"]
 	path = multiplex
 	url = https://github.com/reveal/multiplex.git
+[submodule "reveal.js-3.8.0"]
+	path = reveal.js-3.8.0
+	url = https://github.com/hakimel/reveal.js.git
