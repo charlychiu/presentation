@@ -10,3 +10,6 @@
 [submodule "reveal.js-4.3.1"]
 	path = reveal.js-4.3.1
 	url = git@github.com:hakimel/reveal.js.git
+[submodule "reveal.js-5.1.0"]
+	path = reveal.js-5.1.0
+	url = https://github.com/hakimel/reveal.js.git
