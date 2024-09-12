@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>How to Take on Multiple Roles: PM, QA, and Dev | Bridgewell </title>
+  <meta name="author" content="charlychiu">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/theme/blood.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h3>How to Take on Multiple Roles: PM, QA, and Dev</h3>
+        <small>Created by <a href="https://github.com/charlychiu">@charlychiu</a> - 2024/09</small>
+        </p>
+      </section>
+      <section>
+        <h2>Live Presentation</h2>
+        <img class="r-stretch" src="./link.png" />
+        <p>Get Slides</p>
+      </section>
+      <section data-markdown="./content.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+    </div>
+  </div>
+
+  <script src="../reveal.js-5.1.0/dist/reveal.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      multiplex: {
+        // Example values. To generate your own, see the socket.io server instructions.
+        secret: '17261589681955171346', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+        id: 'dc18301c75ab70e0', // Obtained from socket.io server
+        url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+      },
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      dependencies: [
+      { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+      { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+    ]
+    });
+  </script>
+</body>
+
+</html>
