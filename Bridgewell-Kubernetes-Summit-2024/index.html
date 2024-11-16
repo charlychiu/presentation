@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kubernetes Summit 2024 | Bridgewell </title>
+  <meta name="author" content="charlychiu">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/theme/blood.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h3>Kubernetes Summit 2024</h3>
+        <small>Created by <a href="https://github.com/charlychiu">@charlychiu</a> - 2024/11</small>
+        </p>
+      </section>
+      <section>
+        <h2>Live Presentation</h2>
+        <img class="r-stretch" src="./link.png" />
+        <p>Get Slides</p>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Why K8s So Popular & Important</h4>
+        </section>
+        <section data-auto-animate>
+          <h4>Why K8s So Popular & Important</h4>
+          <ul>
+            <li>Container Orchestration</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>Why K8s So Popular & Important</h4>
+          <ul>
+            <li>Container Orchestration</li>
+            <li>Automating deployment, scaling, and management</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>Why K8s So Popular & Important</h4>
+          <ul>
+            <li><span style="color: red;">Container</span> Orchestration</li>
+            <li>Automating deployment, scaling, and management</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>What is Container</h4>
+        </section>
+        <section data-auto-animate>
+          <h4>What is Container</h4>
+          <img class="r-stretch" data-src="./images/container.png">
+        </section>
+        <section data-auto-animate>
+          <h4>What is Container</h4>
+          <img class="r-stretch" data-src="./images/container.png">
+          <ul>
+            <li>Packages code and dependencies</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>What is Container</h4>
+          <img class="r-stretch" data-src="./images/container.png">
+          <ul>
+            <li>Packages code and dependencies</li>
+            <li>Isolate software from its environment</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>What is Container</h4>
+          <img class="r-stretch" data-src="./images/container.png">
+          <ul>
+            <li>Packages code and dependencies</li>
+            <li>Isolate software from its environment</li>
+            <li>Works uniformly</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>Container vs. Virtual Machines</h4>
+          <img class="r-stretch" data-src="./images/container-vs-vm.png">
+          <div style="display: flex; justify-content: space-between;">
+            <ul>
+              <li>Abstraction at the app layer</li>
+            </ul>
+            <ul>
+              <li>Abstraction of physical hardware</li>
+            </ul>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h4>Container vs. Virtual Machines</h4>
+          <img class="r-stretch" data-src="./images/container-vs-vm.png">
+          <div style="display: flex; justify-content: space-between;">
+            <ul>
+              <li>Abstraction at the app layer</li>
+              <li>Share the OS kernel</li>
+            </ul>
+            <ul>
+              <li>Abstraction of physical hardware</li>
+              <li>Full copy of an OS</li>
+            </ul>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h4>Container vs. Virtual Machines</h4>
+          <img class="r-stretch" data-src="./images/container-vs-vm.png">
+          <div style="display: flex; justify-content: space-between;">
+            <ul>
+              <li>Abstraction at the app layer</li>
+              <li>Share the OS kernel</li>
+              <li>Tens of MBs in size</li>
+            </ul>
+            <ul>
+              <li>Abstraction of physical hardware</li>
+              <li>Full copy of an OS</li>
+              <li>Tens of GBs in size</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="../reveal.js-5.1.0/dist/reveal.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      multiplex: {
+        // Example values. To generate your own, see the socket.io server instructions.
+        secret: '', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+        id: '', // Obtained from socket.io server
+        url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
+      },
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      slideNumber: true,
+      touch: false,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      dependencies: [
+      { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
+      { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
+    ]
+    });
+  </script>
+</body>
+
+</html>
