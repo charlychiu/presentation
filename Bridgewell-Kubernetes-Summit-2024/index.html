@@ -19,108 +19,82 @@
         </p>
       </section>
       <section>
-        <h2>Live Presentation</h2>
-        <img class="r-stretch" src="./link.png" />
-        <p>Get Slides</p>
-      </section>
-      <section>
         <section data-auto-animate>
-          <h4>Why K8s So Popular & Important</h4>
-        </section>
-        <section data-auto-animate>
-          <h4>Why K8s So Popular & Important</h4>
-          <ul>
-            <li>Container Orchestration</li>
-          </ul>
-        </section>
-        <section data-auto-animate>
-          <h4>Why K8s So Popular & Important</h4>
-          <ul>
-            <li>Container Orchestration</li>
-            <li>Automating deployment, scaling, and management</li>
-          </ul>
-        </section>
-        <section data-auto-animate>
-          <h4>Why K8s So Popular & Important</h4>
-          <ul>
-            <li><span style="color: red;">Container</span> Orchestration</li>
-            <li>Automating deployment, scaling, and management</li>
-          </ul>
+          <h4>Troubleshooting and Workaround in Kubernetes</h4>
+          <p>Intermediate</p>
         </section>
       </section>
       <section>
         <section data-auto-animate>
-          <h4>What is Container</h4>
+          <h4>How to unexpectedly break a k8s cluster?</h4>
+          <p>Beginner</p>
         </section>
         <section data-auto-animate>
-          <h4>What is Container</h4>
-          <img class="r-stretch" data-src="./images/container.png">
-        </section>
-        <section data-auto-animate>
-          <h4>What is Container</h4>
-          <img class="r-stretch" data-src="./images/container.png">
+          <h4>Three principles</h4>
           <ul>
-            <li>Packages code and dependencies</li>
+            <li class="fragment">1. default value everywhere</li>
+            <li class="fragment">2. two should be enough</li>
+            <li class="fragment">3. client is always right</li>
           </ul>
         </section>
         <section data-auto-animate>
-          <h4>What is Container</h4>
-          <img class="r-stretch" data-src="./images/container.png">
+          <h4>1. Default value everywhere</h4>
+          <p>readiness & liveness probes</p>
           <ul>
-            <li>Packages code and dependencies</li>
-            <li>Isolate software from its environment</li>
+            <li class="fragment">pod will never be ready</li>
+            <li class="fragment">pod will restart forever</li>
           </ul>
         </section>
         <section data-auto-animate>
-          <h4>What is Container</h4>
-          <img class="r-stretch" data-src="./images/container.png">
+          <h4>1. Default value everywhere</h4>
+          <p>Resource request and limit</p>
           <ul>
-            <li>Packages code and dependencies</li>
-            <li>Isolate software from its environment</li>
-            <li>Works uniformly</li>
+            <li class="fragment">consume as many resource as are available on the node</li>
+            <li class="fragment">OOM killed</li>
+            <li class="fragment">Deployment keeps failing</li>
           </ul>
         </section>
         <section data-auto-animate>
-          <h4>Container vs. Virtual Machines</h4>
-          <img class="r-stretch" data-src="./images/container-vs-vm.png">
-          <div style="display: flex; justify-content: space-between;">
-            <ul>
-              <li>Abstraction at the app layer</li>
-            </ul>
-            <ul>
-              <li>Abstraction of physical hardware</li>
-            </ul>
-          </div>
+          <h4>2. two should be enough</h4>
+          <p>Two should be enough for kubernetes upgrade</p>
+          <ul>
+            <li class="fragment">pod disruption budget</li>
+          </ul>
         </section>
         <section data-auto-animate>
-          <h4>Container vs. Virtual Machines</h4>
-          <img class="r-stretch" data-src="./images/container-vs-vm.png">
-          <div style="display: flex; justify-content: space-between;">
-            <ul>
-              <li>Abstraction at the app layer</li>
-              <li>Share the OS kernel</li>
-            </ul>
-            <ul>
-              <li>Abstraction of physical hardware</li>
-              <li>Full copy of an OS</li>
-            </ul>
-          </div>
+          <h4>2. two should be enough</h4>
+          <p>Two should be enough for kubernetes upgrade</p>
+          <ul>
+            <li class="fragment">pod disruption budget</li>
+          </ul>
         </section>
         <section data-auto-animate>
-          <h4>Container vs. Virtual Machines</h4>
-          <img class="r-stretch" data-src="./images/container-vs-vm.png">
-          <div style="display: flex; justify-content: space-between;">
-            <ul>
-              <li>Abstraction at the app layer</li>
-              <li>Share the OS kernel</li>
-              <li>Tens of MBs in size</li>
-            </ul>
-            <ul>
-              <li>Abstraction of physical hardware</li>
-              <li>Full copy of an OS</li>
-              <li>Tens of GBs in size</li>
-            </ul>
-          </div>
+          <h4>3. client is always right</h4>
+          <p>http certificate</p>
+          <ul>
+            <li class="fragment">SSL checker</li>
+            <li class="fragment">NicSRS → Download Certificate Chain</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>Takeaways</h4>
+          <ul>
+            <li class="fragment">Read document</li>
+            <li class="fragment">Read document</li>
+            <li class="fragment">Don’t trust your client</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Troubleshooting Stories from On-Premises K8s</h4>
+          <p>Intermediate</p>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Why and Why not of enabling swap in Kubernetes</h4>
+          <p>Advanced</p>
         </section>
       </section>
     </div>
