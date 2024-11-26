@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kubernetes Summit 2024 | Bridgewell </title>
+  <meta name="author" content="charlychiu">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/dist/theme/blood.css" id="theme">
+  <link rel="stylesheet" href="../reveal.js-5.1.0/plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h3>Kubernetes Summit 2024</h3>
+        <small>Created by <a href="https://github.com/charlychiu">@charlychiu</a> - 2024/11</small>
+        </p>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Troubleshooting and Workaround in Kubernetes</h4>
+          <p>Intermediate</p>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>How to unexpectedly break a k8s cluster?</h4>
+          <p>Beginner</p>
+        </section>
+        <section data-auto-animate>
+          <h4>Three principles</h4>
+          <ul>
+            <li class="fragment">1. default value everywhere</li>
+            <li class="fragment">2. two should be enough</li>
+            <li class="fragment">3. client is always right</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>1. Default value everywhere</h4>
+          <p>Result: Readiness & Liveness Probes</p>
+          <ul>
+            <li class="fragment">Pod will never be ready</li>
+            <li class="fragment">Pod will restart forever</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>1. Default value everywhere</h4>
+          <p>Result: Resource Request and Limit</p>
+          <ul>
+            <li class="fragment">Consume as many resource as are available on the node</li>
+            <li class="fragment">OOM killed</li>
+            <li class="fragment">Deployment keeps failing</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>2. Two should be enough</h4>
+          <p>Two should be enough for Kubernetes upgrade</p>
+          <ul>
+            <li class="fragment">Pod Disruption Budget</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>3. Client is always right</h4>
+          <p>Http Certificate</p>
+          <ul>
+            <li class="fragment">SSL checker</li>
+            <li class="fragment">NicSRS → Download Certificate Chain</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h4>Takeaways</h4>
+          <ul>
+            <li class="fragment">Read document</li>
+            <li class="fragment">Read document</li>
+            <li class="fragment">Don’t trust your client</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Troubleshooting Stories from On-Premises K8s</h4>
+          <p>Intermediate</p>
+        </section>
+      </section>
+      <section>
+        <section data-auto-animate>
+          <h4>Why and Why not of enabling swap in Kubernetes</h4>
+          <p>Advanced</p>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="../reveal.js-5.1.0/dist/reveal.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="../reveal.js-5.1.0/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      slideNumber: true,
+      touch: false,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
