@@ -39,37 +39,30 @@
         </section>
         <section data-auto-animate>
           <h4>1. Default value everywhere</h4>
-          <p>readiness & liveness probes</p>
+          <p>Result: Readiness & Liveness Probes</p>
           <ul>
-            <li class="fragment">pod will never be ready</li>
-            <li class="fragment">pod will restart forever</li>
+            <li class="fragment">Pod will never be ready</li>
+            <li class="fragment">Pod will restart forever</li>
           </ul>
         </section>
         <section data-auto-animate>
           <h4>1. Default value everywhere</h4>
-          <p>Resource request and limit</p>
+          <p>Result: Resource Request and Limit</p>
           <ul>
-            <li class="fragment">consume as many resource as are available on the node</li>
+            <li class="fragment">Consume as many resource as are available on the node</li>
             <li class="fragment">OOM killed</li>
             <li class="fragment">Deployment keeps failing</li>
           </ul>
         </section>
         <section data-auto-animate>
-          <h4>2. two should be enough</h4>
+          <h4>2. Two should be enough</h4>
           <p>Two should be enough for kubernetes upgrade</p>
           <ul>
-            <li class="fragment">pod disruption budget</li>
+            <li class="fragment">Pod Disruption Budget</li>
           </ul>
         </section>
         <section data-auto-animate>
-          <h4>2. two should be enough</h4>
-          <p>Two should be enough for kubernetes upgrade</p>
-          <ul>
-            <li class="fragment">pod disruption budget</li>
-          </ul>
-        </section>
-        <section data-auto-animate>
-          <h4>3. client is always right</h4>
+          <h4>3. Client is always right</h4>
           <p>http certificate</p>
           <ul>
             <li class="fragment">SSL checker</li>
@@ -106,23 +99,13 @@
   <script src="../reveal.js-5.1.0/plugin/notes/notes.js"></script>
   <script>
     Reveal.initialize({
-      multiplex: {
-        // Example values. To generate your own, see the socket.io server instructions.
-        secret: '', // Obtained from the socket.io server. Gives this (the master) control of the presentation
-        id: '', // Obtained from socket.io server
-        url: 'https://reveal-multiplex.glitch.me/' // Location of socket.io server
-      },
       controls: true,
       progress: true,
       history: true,
       center: true,
       slideNumber: true,
       touch: false,
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-      dependencies: [
-      { src: 'https://reveal-multiplex.glitch.me/socket.io/socket.io.js', async: true },
-      { src: 'https://reveal-multiplex.glitch.me/client.js', async: true }
-    ]
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
     });
   </script>
 </body>
