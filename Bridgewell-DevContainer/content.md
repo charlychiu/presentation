@@ -100,18 +100,9 @@
 
 - Git clone the project
 - Open with VS Code & prompt to reopen in devcontainer (VS Code extension)
-- One-click prepared environment
-- Supports port forwarding, postCreateCommand, VS Code extension installation
-
-
-## What does DevContainer do?
-
-- Proposed by Microsoft
-- VS Code extension
-- `devcontainer.json`
-- `Dockerfile`
-- `docker-compose.yml`
-- Best practices
+- Click `Reopen in Container`, then the ready environment to develop
+- Supports "port forwarding", "postCreateCommand", "VS Code extension installation"
+- [spec](https://containers.dev/implementors/json_reference/)
 
 
 ## Q&A
